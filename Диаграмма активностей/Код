@@ -1,1 +1,16 @@
+@startuml
+!theme materia
+start
 
+repeat :Отправка формы;
+
+repeat while (Форма отправлена?) is (Нет) not (Да)
+
+:Рассмотрение формы;
+:Ответ на форму;
+:Отметка расмотренной;
+
+
+
+stop
+@enduml
