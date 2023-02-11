@@ -1,0 +1,42 @@
+@startuml
+!theme materia
+
+actor "зарегистрированный пользователь" as loguser
+
+usecase "авторизация" as UC1
+usecase "просмотр информации" as UC2
+usecase "просмотр портфолио" as UC3
+usecase "использование функционала" as UC4
+usecase "отправка формы" as UC5
+
+loguser --> UC1
+loguser --> UC2
+loguser --> UC3
+loguser --> UC4
+loguser --> UC5
+
+actor "незарегистрированный пользователь" as unloguser
+
+usecase "регистрация" as UC6
+
+unloguser --> UC2
+unloguser --> UC3
+unloguser --> UC6
+
+actor "Администратор" as admin
+
+usecase "Редактирование информации" as UC7
+usecase "Добавление работ" as UC8
+usecase "Редактирование работ" as UC9
+usecase "Удаление работ" as UC10
+usecase "Просмотр заявок" as UC11
+usecase "Изменение статуса заявок" as UC12
+
+admin --> UC7
+admin --> UC8
+admin --> UC9
+admin --> UC10
+admin --> UC11
+admin --> UC12
+
+@enduml
